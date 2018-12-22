@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chord Speller</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="site-title">Chord Speller</h1>
+    </header>
+
+    <section id="content-btn-section">
+        <button class="content-btn" type="button" name="major" id="major">Major</button>
+        <button class="content-btn" type="button" name="minor" id="minor">Minor</button>
+        <button class="content-btn" type="button" name="augmented" id="augmented">Augmented</button>
+        <button class="content-btn" type="button" name="diminished" id="diminished">Diminished</button>
+    </section>
+
+    <main>
+      <form action="index.html" method="POST" class="chordEntryArea">
+        <div class="chordEntryDiv">
+          <label for="C" class="chord-name" id="ceg">C </label>
+          <input type="text" name="C" id="C" class="note" tabindex="0" maxlength="1" pattern="[A-G]"/>
+          <input type="text" name="E" id="E" class="note" tabindex="0" maxlength="1" />
+          <input type="text" name="G" id="G" class="note" tabindex="0" maxlength="1" />
+        </div>
+
+        <div class="chordEntryDiv">
+          <label for="F" class="chord-name" id="fac">F </label>
+          <input type="text" name="F" id="F" class="note" tabindex="0" maxlength="1" pattern="[A-G]"/>
+          <input type="text" name="A" id="A" class="note" tabindex="0" maxlength="1" />
+          <input type="text" name="C" id="C" class="note" tabindex="0" maxlength="1" />
+        </div>
+      </form>
+    </main>
+  </body>
+
+  <script>
+    const noteInputs = document.querySelectorAll('.note');
+    const chordEntryDivs = document.querySelectorAll('.chordEntryDiv');
+
+    // for (let i = 0; i < noteInputs.length; i+=1) {
+    //   noteInputs[i].addEventListener('keyup', (e) => {
+    //     noteInputs[i].style.textTransform = 'uppercase';
+    //     e.target.nextElementSibling.focus();
+    //   })
+    // };
+
+    // Turns border color green if correct, red if incorrect
+    for (let i = 0; i < noteInputs.length; i++) {
+      noteInputs[i].addEventListener('keyup', (e) => {
+        if (e.target.value === noteInputs[i].id) {
+          e.target.style.borderColor = '#06e806';
+        } else {
+          e.target.style.borderColor = 'red';
+        }
+      });
+    };
+
+
+  </script>
+
+</html>
