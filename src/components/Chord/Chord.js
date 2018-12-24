@@ -1,13 +1,17 @@
 import React from 'react';
+import Note from '../Note/Note';
 
-const Chord = ({ name, root, third, fifth }) => {
-  // console.log(chords);
+const Chord = ({ name, root, third, fifth, notes }) => {
   return (
     <div className="chordEntryDiv">
-      <label htmlFor={name} className="chord-name" id={name}>{root}</label>
-      <input type="text" name={root} id={root} className="note" tabIndex="0" maxLength="1" />
-      <input type="text" name={third} id={third} className="note" tabIndex="0" maxLength="1" />
-      <input type="text" name={fifth} id={fifth} className="note" tabIndex="0" maxLength="1" />
+      <label htmlFor={root} className="chord-name" id={name}>{root}</label>
+      <div className="noteInputContainer" >
+      {
+        notes.map((note, index) => {
+          return <Note note={note} key={note + index} id={note + index} />;
+        })
+      }
+      </div>
     </div>
   )
 }

@@ -30,7 +30,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 3vh 0 5vh;
+  padding: 3vh 0 3vh;
 }
 
 .content-btn {
@@ -40,6 +40,13 @@ header {
   font-size: 1rem;
   background-color: #FF7F50;
   color: white;
+}
+
+.noteInputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
 }
 
 .chordEntryArea {

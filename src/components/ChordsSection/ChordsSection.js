@@ -8,6 +8,7 @@ const ChordsSection = ({chords}) => {
       {
         chords.major.map((chord, index) => {
           return <Chord
+            notes={chord.notes}
             name={chord.name}
             root={chord.root}
             third={chord.third}
