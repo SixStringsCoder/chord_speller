@@ -76,3 +76,11 @@ input.note {
   text-align: center;
   border-style: solid;
 }
+
+.green {
+  border-color: rgba(86, 208, 3, 1); /*green*/
+}
+
+.red {
+  border-color: #FF7F50; /*red*/
+}
