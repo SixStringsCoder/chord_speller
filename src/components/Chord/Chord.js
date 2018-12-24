@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Chord = (props) => {
+const Chord = ({ name, root, third, fifth }) => {
+  // console.log(chords);
   return (
     <div className="chordEntryDiv">
-      <label for="C" className="chord-name" id="ceg">C </label>
-      <input type="text" name="C" id="C" className="note" tabIndex="0" maxlength="1" pattern="[A-G]"/>
-      <input type="text" name="E" id="E" className="note" tabIndex="0" maxlength="1" />
-      <input type="text" name="G" id="G" className="note" tabIndex="0" maxlength="1" />
+      <label htmlFor={name} className="chord-name" id={name}>{root}</label>
+      <input type="text" name={root} id={root} className="note" tabIndex="0" maxLength="1" />
+      <input type="text" name={third} id={third} className="note" tabIndex="0" maxLength="1" />
+      <input type="text" name={fifth} id={fifth} className="note" tabIndex="0" maxLength="1" />
     </div>
   )
 }

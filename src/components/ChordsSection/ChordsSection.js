@@ -1,11 +1,20 @@
 import React from 'react';
 import Chord from '../Chord/Chord';
 
-const ChordsSection = (props) => {
+const ChordsSection = ({chords}) => {
   return (
     <main>
       <form action="index.html" method="POST" className="chordEntryArea">
-        <Chord />
+      {
+        chords.major.map((chord, index) => {
+          return <Chord
+            name={chord.name}
+            root={chord.root}
+            third={chord.third}
+            fifth={chord.fifth}
+            key={chord.name} />
+        })
+      }
       </form>
     </main>
   )
