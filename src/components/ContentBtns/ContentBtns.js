@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
+import Button from '../Button/Button';
 
-class ContentBtns extends Component {
-  render() {
+const ContentBtns = ({content, menu}) => {
     return (
       <section id="content-btn-section">
-          <button className="content-btn" type="button" name="major" id="major">Major</button>
-          <button className="content-btn" type="button" name="minor" id="minor">Minor</button>
-          <button className="content-btn" type="button" name="augmented" id="augmented">Augmented</button>
-          <button className="content-btn" type="button" name="diminished" id="diminished">Diminished</button>
+          {
+            menu.map((type, index) => {
+              return <Button selection={type} content={content} key={type}/>
+            })
+          }
       </section>
     )
-  }
 }
 
 export default ContentBtns;

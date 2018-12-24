@@ -6,13 +6,11 @@ const ChordsSection = ({chords}) => {
     <main>
       <form action="index.html" method="POST" className="chordEntryArea">
       {
-        chords.major.map((chord, index) => {
+        chords.map((chord, index) => {
           return <Chord
             notes={chord.notes}
             name={chord.name}
-            root={chord.root}
-            third={chord.third}
-            fifth={chord.fifth}
+            label={chord.label}
             key={chord.name} />
         })
       }

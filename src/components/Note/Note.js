@@ -7,10 +7,10 @@ class Note extends Component {
   }
 
   handleNote = (e) => {
-    this.setState({
-      note: e.target.value,
-      correct: e.target.value === e.target.name ? true : false,
-    });
+      this.setState({
+        note: e.target.value,
+        correct: e.target.value === e.target.name ? true : false,
+      });
   }
 
   render() {

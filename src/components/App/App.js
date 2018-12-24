@@ -6,14 +6,25 @@ import chords from '../util/utility';
 
 
 class App extends Component {
+  state = {
+    menu: ["major", "minor"],
+    content: "major",
+  }
+
+  loadContent = (selection) => {
+    this.setState({
+      content: selection
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <header>
           <h1 id="site-title">Chord Speller</h1>
         </header>
-        <ContentBtns />
-        <ChordsSection chords={chords}/>
+        <ContentBtns content={this.loadContent} menu={this.state.menu} />
+        <ChordsSection chords={chords[this.state.content]} />
       </div>
     );
   }
