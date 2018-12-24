@@ -4,21 +4,13 @@ class Note extends Component {
   state = {
     note: '',
     correct: false,
-    border: 'red'
   }
 
   handleNote = (e) => {
-    console.log(e.target.name);
     this.setState({
       note: e.target.value,
       correct: e.target.value === e.target.name ? true : false,
     });
-  }
-
-  handleCorrect = (e) => {
-    if (this.state.correct) {
-      this.setState({ border: 'green' })
-    }
   }
 
   render() {
