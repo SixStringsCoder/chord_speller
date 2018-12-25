@@ -7,7 +7,7 @@ import chords from '../util/utility';
 
 class App extends Component {
   state = {
-    menu: ["major", "minor"],
+    menu: ["major", "minor", "augmented", "diminished"],
     content: "major",
   }
 

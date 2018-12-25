@@ -25,7 +25,7 @@ class Note extends Component {
           // Correct answer sets border color to green else red
           className={!this.state.correct ? "note red" : "note green"}
           tabIndex="0"
-          maxLength={note.length === 2 ? 2 : 1}
+          maxLength={note.length >= 2 ? 3 : 1}
         />
     )
   }
