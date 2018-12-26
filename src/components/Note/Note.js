@@ -14,7 +14,7 @@ class Note extends Component {
   }
 
   render() {
-    const {note, id } = this.props;
+    const { note, id } = this.props;
     return (
         <input
           type="text"
@@ -25,7 +25,10 @@ class Note extends Component {
           // Correct answer sets border color to green else red
           className={!this.state.correct ? "note red" : "note green"}
           tabIndex="0"
-          maxLength={note.length >= 2 ? 3 : 1}
+          maxLength={(note.length === 3) ? 3
+                      : (note.length === 2) ? 2
+                      : 1
+                    }
         />
     )
   }

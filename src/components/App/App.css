@@ -30,7 +30,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 3vh 0 3vh;
+  padding: 2vh 0 3vh;
 }
 
 .content-btn {
@@ -58,16 +58,17 @@ header {
 }
 
 .chordEntryDiv {
-  width: 80vw;
+  width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 3vh;
 }
 
 label {
-  font-size: 1.8rem;
-  margin: 0 10px 0 0;
+  font-size: 1.5rem;
+  letter-spacing: -2px;
+  /* margin: 0 10px 0 0; */
 }
 
 input.note {

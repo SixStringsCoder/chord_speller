@@ -63,6 +63,22 @@ const chords = {
     { name: "D-diminished", label: "D°", notes: ["D", "F", "Ab"] },
     { name: "G-diminished", label: "G°", notes: ["G", "Bb", "Db"] },
   ],
+  major7: [
+    { name: "C-major7", label: "CM7", notes: ["C", "E", "G", "B"] },
+    { name: "F-major7", label: "FM7", notes: ["F", "A", "C", "E"] },
+    { name: "Bb-major7", label: "BbM7", notes: ["Bb", "D", "F", "A"] },
+    { name: "Eb-major7", label: "EbM7", notes: ["Eb", "G", "Bb", "D"] },
+    { name: "Ab-major7", label: "AbM7", notes: ["Ab", "C", "Eb", "G"] },
+    { name: "Db-major7", label: "DbM7", notes: ["Db", "F", "Ab", "C"] },
+    { name: "Gb-major7", label: "GbM7", notes: ["Gb", "Bb", "Db", "F"] },
+    { name: "C#-major7", label: "C#M7", notes: ["C#", "E#", "G#", "B#"] },
+    { name: "F#-major7", label: "F#M7", notes: ["F#", "A#", "C#", "E#"] },
+    { name: "B-major7", label: "BM7", notes: ["B", "D#", "F#", "A#"] },
+    { name: "E-major7", label: "EM7", notes: ["E", "G#", "B", "D#"] },
+    { name: "A-major7", label: "AM7", notes: ["A", "C#", "E", "G#"] },
+    { name: "D-major7", label: "DM7", notes: ["D", "F#", "A", "C#"] },
+    { name: "G-major7", label: "GM7", notes: ["G", "B", "D", "F#"] },
+  ],
 };
 
 

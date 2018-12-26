@@ -7,8 +7,15 @@ import chords from '../util/utility';
 
 class App extends Component {
   state = {
-    menu: ["major", "minor", "augmented", "diminished"],
+    menu: [],
     content: "major",
+  }
+
+  // Auto update ContentBtns based on chords object in utility file
+  componentDidMount() {
+    this.setState({
+      menu: Object.keys(chords)
+    })
   }
 
   loadContent = (selection) => {
