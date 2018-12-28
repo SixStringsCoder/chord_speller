@@ -18,6 +18,7 @@ class App extends Component {
     })
   }
 
+  // Loads content based on button clicked
   loadContent = (selection) => {
     this.setState({
       content: selection
