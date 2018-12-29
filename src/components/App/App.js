@@ -38,18 +38,24 @@ class App extends Component {
     }
   }
 
+  playNote = (note) => {
+    let thisNote = new Audio(require(`../../audio/${note}.mp3`));
+    thisNote.play();
+  }
+
 
 
   render() {
-
+    const { content, menu } = this.state;
     return (
       <div className="App">
         <header>
           <h1 id="site-title">Chord Speller</h1>
         </header>
-        <ContentBtns content={this.loadContent} menu={this.state.menu} />
-        <ChordsSection chords={chords[this.state.content]}
-                        correctAudio={this.isCorrectAudio} />
+        <ContentBtns content={this.loadContent} menu={menu} />
+        <ChordsSection chords={chords[content]}
+                        correctAudio={this.isCorrectAudio}
+                        playNote={this.playNote} />
       </div>
     );
   }

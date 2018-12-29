@@ -1,7 +1,7 @@
 import React from 'react';
 import Note from '../Note/Note';
 
-const Chord = ({ name, label, notes, correctAudio }) => {
+const Chord = ({ name, label, notes, correctAudio, playNote }) => {
   return (
     <div className="chordEntryDiv">
       <label htmlFor={notes[0]} className="chord-name" id={name}>{label}</label>
@@ -11,7 +11,8 @@ const Chord = ({ name, label, notes, correctAudio }) => {
           return <Note note={note}
                       key={note + index}
                       id={note}
-                      correctAudio={correctAudio} />;
+                      correctAudio={correctAudio}
+                      playNote={playNote} />;
         })
       }
       </div>

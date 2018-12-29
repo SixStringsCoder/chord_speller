@@ -1,7 +1,7 @@
 import React from 'react';
 import Chord from '../Chord/Chord';
 
-const ChordsSection = ({chords, correctAudio}) => {
+const ChordsSection = ({chords, correctAudio, playNote}) => {
   return (
     <main>
       <form action="index.html" method="POST" className="chordEntryArea">
@@ -12,7 +12,8 @@ const ChordsSection = ({chords, correctAudio}) => {
             name={chord.name}
             label={chord.label}
             key={chord.name}
-            correctAudio={correctAudio} />
+            correctAudio={correctAudio}
+            playNote={playNote} />
         })
       }
       </form>

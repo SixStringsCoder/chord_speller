@@ -4,17 +4,27 @@ class Note extends Component {
   state = {
     note: '',
     correct: false,
+    totalChars: 0,
   }
 
   handleNote = (e) => {
       this.setState({
         note: e.target.value,
         correct: e.target.value === e.target.name ? true : false,
-      }, this.appCallBack);
-  }
+        totalChars: Number(e.target.maxLength), // totalChars allows for double-char note i.e. Bb and C# to play after 2nd character
+      }, this.handleNoteAudio);
+    }
+
 
   appCallBack = () => {
     this.props.correctAudio(this.state.correct);
+  }
+
+  handleNoteAudio = () => {
+    if (this.state.note.length === this.state.totalChars) {
+      let lowerCaseNote = this.state.note;
+      this.props.playNote(lowerCaseNote);
+    }
   }
 
   render() {
