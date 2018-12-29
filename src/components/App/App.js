@@ -3,12 +3,18 @@ import './App.css';
 import ContentBtns from '../ContentBtns/ContentBtns';
 import ChordsSection from '../ChordsSection/ChordsSection';
 import chords from '../util/utility';
+import bell from '../../audio/bell.mp3';
 
 
 class App extends Component {
-  state = {
-    menu: [],
-    content: "major",
+  constructor(props) {
+    super(props);
+    this.state = {
+      menu: [],
+      content: "major",
+    }
+
+    this.bell = new Audio(bell);
   }
 
   // Auto update ContentBtns based on chords object in utility file
@@ -25,14 +31,25 @@ class App extends Component {
     })
   }
 
+  isCorrectAudio = (answer) => {
+    if (answer) {
+      this.bell.volume = 0.2;
+      this.bell.play();
+    }
+  }
+
+
+
   render() {
+
     return (
       <div className="App">
         <header>
           <h1 id="site-title">Chord Speller</h1>
         </header>
         <ContentBtns content={this.loadContent} menu={this.state.menu} />
-        <ChordsSection chords={chords[this.state.content]} />
+        <ChordsSection chords={chords[this.state.content]}
+                        correctAudio={this.isCorrectAudio} />
       </div>
     );
   }

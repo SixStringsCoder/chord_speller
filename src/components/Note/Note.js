@@ -10,7 +10,11 @@ class Note extends Component {
       this.setState({
         note: e.target.value,
         correct: e.target.value === e.target.name ? true : false,
-      });
+      }, this.appCallBack);
+  }
+
+  appCallBack = () => {
+    this.props.correctAudio(this.state.correct);
   }
 
   render() {
