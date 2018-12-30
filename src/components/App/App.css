@@ -66,9 +66,17 @@ header {
 }
 
 label {
-  font-size: 1.5rem;
-  letter-spacing: -2px;
-  /* margin: 0 10px 0 0; */
+  width: 12vw;
+  line-height: 12vw;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1rem;
+  padding: 7px;
+  box-shadow: 0 0 3px 1px black;
+}
+
+label:active {
+  box-shadow: 0 0 1px black;
 }
 
 input.note {
