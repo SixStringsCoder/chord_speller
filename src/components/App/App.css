@@ -34,7 +34,7 @@ header {
 }
 
 .content-btn {
-  width: 150px;
+  width: 100px;
   padding: 5px;
   margin: 0 10px;
   font-size: 1rem;
@@ -66,8 +66,8 @@ header {
 }
 
 label {
-  width: 12vw;
-  line-height: 12vw;
+  width: 45px;
+  line-height: 45px;
   border-radius: 50%;
   text-align: center;
   font-size: 1rem;
@@ -85,6 +85,13 @@ input.note {
   padding: 5px;
   text-align: center;
   border-style: solid;
+}
+
+input::placeholder {
+  position: relative;
+  bottom: 3px;
+  font-size: .9rem;
+  color: #ddd;
 }
 
 .green {

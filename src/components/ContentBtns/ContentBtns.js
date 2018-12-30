@@ -1,12 +1,15 @@
 import React from 'react';
 import Button from '../Button/Button';
 
-const ContentBtns = ({content, menu}) => {
+const ContentBtns = ({content, btnMenu}) => {
     return (
       <section id="content-btn-section">
           {
-            menu.map((type, index) => {
-              return <Button selection={type} content={content} key={type}/>
+            btnMenu.map((scaleType, index) => {
+              return <Button selection={scaleType}
+                             content={content}
+                             key={scaleType}
+                             />
             })
           }
       </section>

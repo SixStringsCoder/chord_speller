@@ -14,12 +14,11 @@ class Chord extends Component {
   playChord = (e) => {
     let loadChord = chordAudio[`${e.target.htmlFor}-chord`];
     let chord = new Audio(loadChord);
-    console.log(loadChord);
     chord.play();
   }
 
   render() {
-    const { name, label, notes, playNote } = this.props;
+    const { name, label, notes } = this.props;
     return (
       <div className="chordEntryDiv">
         <label htmlFor={label}
@@ -29,11 +28,12 @@ class Chord extends Component {
         <div className="noteInputContainer" >
         {
           notes.map((note, index) => {
+            const notePos = ["root", "third", "fifth", "seventh"]
             return <Note note={note}
                         key={note + index}
                         id={note}
-                        playChord={this.playChord}
-                        playNote={playNote} />;
+                        placeholder={notePos[index]}
+                        />;
           })
         }
         </div>

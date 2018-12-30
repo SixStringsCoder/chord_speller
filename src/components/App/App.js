@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menu: [],
+      btnMenu: [],
       content: "major",
     }
   }
@@ -16,34 +16,29 @@ class App extends Component {
   // Auto update ContentBtns based on chords object in utility file
   componentDidMount() {
     this.setState({
-      menu: Object.keys(chords)
+      btnMenu: Object.keys(chords)
     })
   }
 
-  // Loads content based on button clicked
+  // Loads content based on button clicked (i.e. major, minor, etc.)
   loadContent = (selection) => {
     this.setState({
       content: selection
     })
   }
 
-  playNote = (note) => {
-    let thisNote = new Audio(require(`../../audio/${note}.mp3`));
-    thisNote.play();
-  }
-
-
 
   render() {
-    const { content, menu } = this.state;
+    const { content, btnMenu } = this.state;
     return (
       <div className="App">
         <header>
           <h1 id="site-title">Chord Speller</h1>
         </header>
-        <ContentBtns content={this.loadContent} menu={menu} />
-        <ChordsSection chords={chords[content]}
-                        playNote={this.playNote} />
+        <ContentBtns content={this.loadContent}
+                     btnMenu={btnMenu}
+                     />
+        <ChordsSection chords={chords[content]} />
       </div>
     );
   }
