@@ -1,4 +1,4 @@
-const chords = {
+export const chords = {
   major: [
     { name: "C-major", label: "C", notes: ["C", "E", "G"] },
     { name: "F-major", label: "F", notes: ["F", "A", "C"] },
@@ -81,5 +81,44 @@ const chords = {
   ],
 };
 
+export const chordAudio = {
+    "C-chord": require("../../audio/C-chord.mp3"),
+    "F-chord": require("../../audio/F-chord.mp3"),
+    "Bb-chord": require("../../audio/Bb-chord.mp3"),
+    "Eb-chord": require("../../audio/Eb-chord.mp3"),
+    "Ab-chord": require("../../audio/Ab-chord.mp3"),
+    "Db-chord": require("../../audio/Db-chord.mp3"),
+    "C#-chord": require("../../audio/Db-chord.mp3"),
+    "Gb-chord": require("../../audio/Gb-chord.mp3"),
+    "F#-chord": require("../../audio/Gb-chord.mp3"),
+    "B-chord": require("../../audio/B-chord.mp3"),
+    "E-chord": require("../../audio/E-chord.mp3"),
+    "A-chord": require("../../audio/A-chord.mp3"),
+    "D-chord": require("../../audio/D-chord.mp3"),
+    "G-chord": require("../../audio/G-chord.mp3"),
+}
 
-export default chords;
+export const noteAudio = {
+    "C": require("../../audio/C.mp3"),
+    "C#": require("../../audio/Db.mp3"),
+    "Db": require("../../audio/Db.mp3"),
+    "D": require("../../audio/D.mp3"),
+    "Eb": require("../../audio/Eb.mp3"),
+    "E": require("../../audio/E.mp3"),
+    "F": require("../../audio/F.mp3"),
+    "F#": require("../../audio/Gb.mp3"),
+    "Gb": require("../../audio/Gb.mp3"),
+    "G": require("../../audio/G.mp3"),
+    "Ab": require("../../audio/Ab.mp3"),
+    "A": require("../../audio/A.mp3"),
+    "Bb": require("../../audio/Bb.mp3"),
+    "B": require("../../audio/B.mp3"),
+    "C2": require("../../audio/C2.mp3"),
+    "F2": require("../../audio/F2.mp3"),
+    "Gb2": require("../../audio/Gb2.mp3"),
+    "G2": require("../../audio/G2.mp3"),
+    "Ab2": require("../../audio/Ab2.mp3"),
+    "A2": require("../../audio/A2.mp3"),
+    "Bb2": require("../../audio/Bb2.mp3"),
+    "B2": require("../../audio/B2.mp3"),
+  }
