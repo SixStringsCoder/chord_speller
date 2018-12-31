@@ -9,6 +9,8 @@ const ChordsSection = ({ chords, playChord }) => {
         chords.map((chord, index) => {
           return <Chord
             notes={chord.notes}
+            audio={chord.audio}
+            chordAudio={chord.chordAudio}
             name={chord.name}
             label={chord.label}
             key={chord.name}

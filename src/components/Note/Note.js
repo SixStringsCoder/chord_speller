@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { noteAudio } from '../util/utility';
 
 class Note extends Component {
   state = {
@@ -24,7 +23,7 @@ class Note extends Component {
   handleNoteAudio = () => {
     if (this.state.note.length === this.state.totalChars && this.state.correctNote) {
       // let loadNote = (this.state.notePosition !== "root") ? noteAudio[`${this.state.note}2`] : noteAudio[`${this.state.note}`];
-      let loadNote = noteAudio[`${this.state.note}`];
+      let loadNote = require(`../../audio/${this.props.audio}.mp3`);
       let note = new Audio(loadNote);
       console.log(this.state.note + " just played");
       note.play();

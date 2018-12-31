@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Note from '../Note/Note';
-import { chordAudio } from '../util/utility';
 
 class Chord extends Component {
 
@@ -11,14 +10,14 @@ class Chord extends Component {
     }
   }
 
-  playChord = (e) => {
-    let loadChord = chordAudio[`${e.target.htmlFor}-chord`];
+  playChord = () => {
+    let loadChord = require(`../../audio/${this.props.chordAudio}-chord.mp3`);
     let chord = new Audio(loadChord);
     chord.play();
   }
 
   render() {
-    const { name, label, notes } = this.props;
+    const { name, label, notes, audio } = this.props;
     return (
       <div className="chordEntryDiv">
         <label htmlFor={label}
@@ -30,6 +29,7 @@ class Chord extends Component {
           notes.map((note, index) => {
             const notePos = ["root", "third", "fifth", "seventh"]
             return <Note note={note}
+                        audio={audio[index]}
                         key={note + index}
                         id={note}
                         placeholder={notePos[index]}
