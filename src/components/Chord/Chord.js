@@ -11,7 +11,7 @@ class Chord extends Component {
   }
 
   playChord = () => {
-    let loadChord = require(`../../audio/${this.props.chordAudio}-chord.mp3`);
+    let loadChord = require(`../../audio/chords/${this.props.chordAudio}-chord.mp3`);
     let chord = new Audio(loadChord);
     chord.play();
   }
@@ -20,7 +20,7 @@ class Chord extends Component {
     const { name, label, notes, audio } = this.props;
     return (
       <div className="chordEntryDiv">
-        <label htmlFor={label}
+        <label htmlFor={label + "root"}
               className="chord-name"
               id={name}
               onClick={this.playChord}>{label}</label>
@@ -31,7 +31,7 @@ class Chord extends Component {
             return <Note note={note}
                         audio={audio[index]}
                         key={note + index}
-                        id={note}
+                        id={note + notePos[index]}
                         placeholder={notePos[index]}
                         />;
           })

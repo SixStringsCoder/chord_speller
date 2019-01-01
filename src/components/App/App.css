@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid black;
   background-color: rgba(118, 255, 25, 1);
 }
