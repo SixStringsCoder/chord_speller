@@ -3,16 +3,11 @@ import Note from '../Note/Note';
 
 class Chord extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
 
-    }
-  }
-
-  playChord = () => {
+  playChord = (e) => {
     let loadChord = require(`../../audio/chords/${this.props.chordAudio}-chord.mp3`);
     let chord = new Audio(loadChord);
+    chord.volume = 0.4;
     chord.play();
   }
 
@@ -23,7 +18,9 @@ class Chord extends Component {
         <label htmlFor={label + "root"}
               className="chord-name"
               id={name}
-              onClick={this.playChord}>{label}</label>
+              tabIndex={0}
+              onClick={this.playChord}
+              onKeyDown={this.playChord}>{label}</label>
         <div className="noteInputContainer" >
         {
           notes.map((note, index) => {
@@ -31,7 +28,8 @@ class Chord extends Component {
             return <Note note={note}
                         audio={audio[index]}
                         key={note + index}
-                        id={note + notePos[index]}
+                        id={label + notePos[index]}
+                        tabIndex={0}
                         placeholder={notePos[index]}
                         />;
           })

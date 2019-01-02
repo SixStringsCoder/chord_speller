@@ -10,22 +10,20 @@ class Note extends Component {
   }
 
   handleNote = (e) => {
-      this.setState({
-        note: e.target.value,
-        notePosition: e.target.placeholder,
-        correctNote: e.target.value === e.target.name ? true : false,
-        totalChars: Number(e.target.maxLength), // totalChars allows for double-char notes i.e. Bb and C# to play after 2nd character
-      }, this.handleNoteAudio);
-      console.log(e.target.placeholder)
-    }
+    this.setState({
+      note: e.target.value,
+      notePosition: e.target.placeholder,
+      correctNote: e.target.value === e.target.name ? true : false,
+      totalChars: Number(e.target.maxLength), // totalChars allows for double-char notes i.e. Bb and C# to play after 2nd character
+    }, this.handleNoteAudio);
+  }
 
 
   handleNoteAudio = () => {
     if (this.state.note.length === this.state.totalChars && this.state.correctNote) {
-      // let loadNote = (this.state.notePosition !== "root") ? noteAudio[`${this.state.note}2`] : noteAudio[`${this.state.note}`];
       let loadNote = require(`../../audio/${this.props.audio}.mp3`);
       let note = new Audio(loadNote);
-      console.log(this.state.note + " just played");
+      note.volume = 0.5;
       note.play();
     }
   }
