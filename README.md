@@ -59,7 +59,9 @@ This project was built using *Create React App*.  For complete technical details
 #### Planning and Workflow
 
 #### Future Features
-- add audio SFX for correct and incorrect answers for the whole chord (not the individual notes)
 - add a timer for extra challenge
 - add staff with treble or bass clef options
 - add inversions
+- add a section that allows user to build the scales harmonically by drag/drop chord types in order (i.e. drag major for C, drag minor for Dm, drag a minor for Em, a major for F, etc.)
+- add a section to randomly test the various note position of a cord (i.e. what's the 5th of Eb major)
+- add a comparative section (i.e. ability to compare major sound with minor sound or major sound with augmented sound etc.)

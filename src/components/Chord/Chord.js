@@ -16,7 +16,7 @@ class Chord extends Component {
     return (
       <div className="chordEntryDiv">
         <label htmlFor={label + "root"}
-              className="chord-name"
+              className="chord-name tab-outline"
               id={name}
               tabIndex={0}
               onClick={this.playChord}

@@ -5,7 +5,7 @@ class Button extends Component {
     const { selection, content } = this.props;
     return (
           <button onClick={(e) => content(e.target.id)}
-            className="content-btn"
+            className="content-btn tab-outline"
             type="button"
             name={selection}
             id={selection}>

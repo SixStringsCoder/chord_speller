@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1 id="site-title">Chord Speller</h1>
+          <h1 id="site-title">&#127932; Chord Speller &#127926;</h1>
         </header>
         <ContentBtns content={this.loadContent}
                      btnMenu={btnMenu}
