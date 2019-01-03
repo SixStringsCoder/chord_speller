@@ -38,8 +38,11 @@ class Note extends Component {
           name={note}
           placeholder={placeholder}
           id={id}
-          // Correct answer sets border color to green or red
-          className={!this.state.correctNote ? "note red" : "note green"}
+          // Correct answer sets border color to green or red; no value = no color
+          className={ (this.state.note && !this.state.correctNote) ? "note tab-outline red" :
+                      (this.state.correctNote) ? "note tab-outline green" :
+                      "note tab-outline"
+                     }
           tabIndex="0"
           maxLength={(note.length === 3) ? 3
                       : (note.length === 2) ? 2
