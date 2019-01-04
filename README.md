@@ -59,6 +59,7 @@ This project was built using *Create React App*.  For complete technical details
 #### Planning and Workflow
 
 #### Future Features
+- add a modal window that explains how to build the types of chords and how to move the tab index and fill-in the chords
 - add a timer for extra challenge
 - add staff with treble or bass clef options
 - add inversions

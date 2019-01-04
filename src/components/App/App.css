@@ -26,6 +26,67 @@ header {
   letter-spacing: 2px;
 }
 
+#help-btn {
+  font-size: 1.5rem;
+  padding: 5px 13px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#help-btn:hover {
+  opacity: .75;
+}
+
+#help-btn:active {
+  color: #fff;
+  background-color: rgba(0,0,0, 1);
+}
+
+.help-window-show {
+  width: 80vw;
+  height: 95vw;
+  position: absolute;
+  top: 25%;
+  left: 7%; /* On screen */
+  z-index: 1;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 0 6px black;
+  transition: left .5s;
+}
+
+.help-window-hide {
+  width: 80vw;
+  height: 95vw;
+  position: absolute;
+  top: 25%;
+  left: 102%; /* Off screen left */
+  z-index: 1;
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 0 6px black;
+  transition: left .5s;
+}
+
+#close-modal-icon {
+  font-size: 1.2rem;
+  position: absolute;
+  left: 90%;
+  text-align: center;
+}
+
+#close-modal-icon:active {
+  font-size: 1.1rem;
+}
+
 #content-btn-section {
   width: 100vw;
   height: 15vh;
@@ -37,9 +98,9 @@ header {
 }
 
 .content-btn {
-  width: 110px;
+  width: 106px;
   padding: 6px 9px 8px;
-  margin: 0 7px;
+  margin: 1px 7px;
   border-radius: 25px;
   font-size: 1.1rem;
   background-color: #000;
@@ -48,7 +109,7 @@ header {
 }
 
 .content-btn:active {
-  background-color: white;
+  background-color: #f1f2f2;
   color: #000;
 }
 
@@ -123,4 +184,19 @@ input::placeholder {
 .red {
   background-color: #e06a6a; /*red*/
   color: #FFF;
+}
+
+/*====================
+    MEDIA QUERIES
+====================*/
+
+@media (min-width: 768px) {
+  .chordEntryDiv {
+    width: 60vw;
+    justify-content: space-between;
+  }
+
+  #content-btn-section {
+    height: 7vh;
+  }
 }

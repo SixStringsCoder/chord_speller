@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import ContentBtns from '../ContentBtns/ContentBtns';
 import ChordsSection from '../ChordsSection/ChordsSection';
+import HelpWindow from '../HelpWindow/HelpWindow';
 import { chords } from '../util/utility';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
     this.state = {
       btnMenu: [],
       content: "major",
+      hasQuestion: false,
     }
   }
 
@@ -27,16 +29,21 @@ class App extends Component {
     })
   }
 
+  handleQuestion = () => this.setState({hasQuestion: !this.state.hasQuestion});
 
   render() {
     const { content, btnMenu } = this.state;
     return (
       <div className="App">
         <header>
-          <h1 id="site-title">&#127932; Chord Speller &#127926;</h1>
+          <h1 id="site-title"><span>&#127932;</span> Chord Speller <span>&#127926;</span></h1>
         </header>
+        <HelpWindow hasQuestion={this.state.hasQuestion}
+                    handleQuestion={this.handleQuestion}
+                    />
         <ContentBtns content={this.loadContent}
                      btnMenu={btnMenu}
+                     handleQuestion={this.handleQuestion}
                      />
         <ChordsSection chords={chords[content]} />
       </div>

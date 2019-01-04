@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from '../Button/Button';
+import HelpBtn from '../HelpBtn/HelpBtn';
 
-const ContentBtns = ({content, btnMenu}) => {
+const ContentBtns = ({content, btnMenu, handleQuestion}) => {
     return (
       <section id="content-btn-section">
           {
@@ -12,6 +13,7 @@ const ContentBtns = ({content, btnMenu}) => {
                              />
             })
           }
+          <HelpBtn handleQuestion={handleQuestion} />
       </section>
     )
 }
