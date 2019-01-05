@@ -40,6 +40,8 @@ class App extends Component {
         </header>
         <HelpWindow hasQuestion={this.state.hasQuestion}
                     handleQuestion={this.handleQuestion}
+                    chords={chords}
+                    scale={this.state.content}
                     />
         <ContentBtns content={this.loadContent}
                      btnMenu={btnMenu}

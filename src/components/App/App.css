@@ -26,6 +26,10 @@ header {
   letter-spacing: 2px;
 }
 
+#help-btn-container {
+  margin: 10px 0 0 0;
+}
+
 #help-btn {
   font-size: 1.5rem;
   padding: 5px 13px;
@@ -44,12 +48,12 @@ header {
 
 .help-window-show {
   width: 80vw;
-  height: 95vw;
+  height: auto;
   position: absolute;
   top: 25%;
   left: 7%; /* On screen */
   z-index: 1;
-  padding: 10px;
+  padding: 10px 0 30px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -61,12 +65,12 @@ header {
 
 .help-window-hide {
   width: 80vw;
-  height: 95vw;
+  height: auto;
   position: absolute;
   top: 25%;
   left: 102%; /* Off screen left */
   z-index: 1;
-  padding: 10px;
+  padding: 10px 0 30px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -87,6 +91,29 @@ header {
   font-size: 1.1rem;
 }
 
+section > p {
+  margin-bottom: 0;
+}
+
+.chord-note-list-helpMenu > li {
+    line-height: 1.5;
+}
+
+.help-window-note-examples {
+  font-size: 1.1rem;
+  color: #053ff1;
+  font-weight: bold;
+}
+
+.help-window-text {
+  font-size: 1.1rem;
+  color: #eb1919;
+}
+
+#piano-image {
+  width: 55vw;
+}
+
 #content-btn-section {
   width: 100vw;
   height: 15vh;
@@ -95,6 +122,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 2vh 0 3vh;
+  margin-bottom: 5%;
 }
 
 .content-btn {
