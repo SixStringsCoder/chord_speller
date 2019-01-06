@@ -1,10 +1,11 @@
 export const chords = {
   type: {
-    major: [ 4, 3 ],
-    minor: [ 4, 4 ],
-    augmented: [ 4, 4 ],
-    diminished: [ 3, 3 ],
-    major7: [ 4, 3, 4 ],
+    positions: ["root", "third", "fifth", "seventh"],
+    major: [ 0, 4, 3 ],
+    minor: [ 0, 4, 4 ],
+    augmented: [ 0, 4, 4 ],
+    diminished: [ 0, 3, 3 ],
+    major7: [ 0, 4, 3, 4 ],
   },
   major: [
     { name: "C-major", label: "C", notes: ["C", "E", "G"], audio: ["C", "E", "G2"], chordAudio: "C"},

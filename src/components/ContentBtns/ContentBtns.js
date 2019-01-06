@@ -13,9 +13,9 @@ const ContentBtns = ({content, btnMenu, handleQuestion}) => {
                              />
             })
           }
-          <span id="help-btn-container">
+
           <HelpBtn handleQuestion={handleQuestion} />
-          </span>
+        
       </section>
     )
 }

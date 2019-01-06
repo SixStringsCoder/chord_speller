@@ -17,8 +17,9 @@ class App extends Component {
 
   // Auto update ContentBtns based on chords object in utility file
   componentDidMount() {
+    let chordTypes = Object.keys(chords)
     this.setState({
-      btnMenu: Object.keys(chords)
+      btnMenu: chordTypes.slice(1)
     })
   }
 
