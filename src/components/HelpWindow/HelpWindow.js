@@ -16,7 +16,7 @@ const HelpWindow = ({ showModal, handleQuestion, hasQuestion, chords, scale }) =
             chords[scale][randomChord].notes.map((note, index) => {
               let position = chords["type"].positions[index];
               let numHalfSteps = chords["type"][scale][index];
-              let sentence =  `${numHalfSteps} half steps above the ${chords["type"].positions[index - 1]},`
+              let sentence =  ` ${numHalfSteps} half steps above the ${chords["type"].positions[index - 1]},`
               return  <HelpNotePositions pos={position}
                                          halfSteps={index > 0 ? sentence : ""}
                                          exampleNote={note}

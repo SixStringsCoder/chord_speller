@@ -95,6 +95,9 @@ section > p {
   margin-bottom: 0;
 }
 
+.chord-note-list-helpMenu {
+  padding: 0 9vw;
+}
 .chord-note-list-helpMenu > li {
     line-height: 1.5;
 }
@@ -225,6 +228,11 @@ input::placeholder {
   }
 
   #content-btn-section {
+    width: 60vw;
     height: 7vh;
+  }
+
+  .content-btn {
+    margin: 5px 7px;
   }
 }
