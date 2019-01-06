@@ -37,7 +37,11 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1 id="site-title"><span>&#127932;</span> Chord Speller <span>&#127926;</span></h1>
+          <h1 id="site-title">
+            <span role="img" aria-label="treble clef icon">&#127932;</span>
+              Chord Speller 
+            <span role="img" aria-label="musical notes icon">&#127926;</span>
+          </h1>
         </header>
         <HelpWindow hasQuestion={this.state.hasQuestion}
                     handleQuestion={this.handleQuestion}

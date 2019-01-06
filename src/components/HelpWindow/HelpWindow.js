@@ -4,6 +4,7 @@ import HelpNotePositions from '../HelpNotePositions/HelpNotePositions';
 
 const HelpWindow = ({ showModal, handleQuestion, hasQuestion, chords, scale }) => {
 
+  // This create a random chord example from the array in utility so it's not always the same example
   const randomChord = Math.floor(Math.random() * chords[scale].length);
 
   return (
@@ -11,8 +12,7 @@ const HelpWindow = ({ showModal, handleQuestion, hasQuestion, chords, scale }) =
       <p><span className="help-window-text">{scale}</span> chords consists of:</p>
 
       <ul className="chord-note-list-helpMenu">
-        {
-          (
+        {(
             chords[scale][randomChord].notes.map((note, index) => {
               let position = chords["type"].positions[index];
               let numHalfSteps = chords["type"][scale][index];
@@ -20,10 +20,10 @@ const HelpWindow = ({ showModal, handleQuestion, hasQuestion, chords, scale }) =
               return  <HelpNotePositions pos={position}
                                          halfSteps={index > 0 ? sentence : ""}
                                          exampleNote={note}
+                                         key={position}
                                          />
             })
-          )
-        }
+        )}
       </ul>
 
       <img id="piano-image" src={chromaticScale} alt="chromatic scale on piano" />
