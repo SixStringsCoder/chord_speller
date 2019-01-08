@@ -217,6 +217,21 @@ input::placeholder {
   color: #FFF;
 }
 
+.db-enharm {
+  background-color: #AD34BC; /*purple*/
+  color: #FFF;
+}
+
+.gb-enharm {
+  background-color: #1D36A2; /*blue*/
+  color: #FFF;
+}
+
+.ab-enharm {
+  background-color: #73F2D0; /*blue*/
+  color: #000;
+}
+
 /*====================
     MEDIA QUERIES
 ====================*/
