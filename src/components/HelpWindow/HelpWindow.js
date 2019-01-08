@@ -25,9 +25,10 @@ const HelpWindow = ({ showModal, handleQuestion, hasQuestion, chords, scale }) =
             })
         )}
       </ul>
-
-      <img id="piano-image" src={chromaticScale} alt="chromatic scale on piano" />
-
+      <figure>
+        <img id="piano-image" src={chromaticScale} alt="chromatic scale on piano" />
+        <figcaption id="help-img-caption">Each adjacent key is a half step (ex. C to C#, E to F, A# to B).</figcaption>
+      </figure>
       <span onClick={handleQuestion}
             id="close-modal-icon"
             role="img"

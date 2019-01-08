@@ -11,6 +11,7 @@ const ChordsSection = ({ chords, playChord }) => {
             notes={chord.notes}
             audio={chord.audio}
             chordAudio={chord.chordAudio}
+            enharmonic={chord.enharmonic}
             name={chord.name}
             label={chord.label}
             key={chord.name}

@@ -12,13 +12,14 @@ class Chord extends Component {
   }
 
   render() {
-    const { name, label, notes, audio, chordAudio } = this.props;
+    const { name, label, notes, audio, enharmonic } = this.props;
+    console.log({enharmonic});
     return (
       <div className="chordEntryDiv">
         <label htmlFor={label + "root"}
-              className={(chordAudio !== "Dbdim7" && chordAudio.slice(0, 2) === "Db") ? "chord-name tab-outline db-enharm" :
-                         (chordAudio !== "Gbdim7" && chordAudio.slice(0, 2) === "Gb") ? "chord-name tab-outline gb-enharm" :
-                         // (chordAudio !== "Abdim7" && chordAudio.slice(0, 2) === "Ab") ? "chord-name tab-outline ab-enharm" :
+              className={(enharmonic && enharmonic.slice(0, 2) === "Db") ? `chord-name tab-outline ${enharmonic.slice(0, 2)}-enharm` :
+                         (enharmonic && enharmonic.slice(0, 2) === "Gb") ? `chord-name tab-outline ${enharmonic.slice(0, 2)}-enharm` :
+                         (enharmonic && enharmonic.slice(0, 2) === "Ab") ? `chord-name tab-outline ${enharmonic.slice(0, 2)}-enharm` :
                          "chord-name tab-outline"}
               id={name}
               tabIndex={0}
