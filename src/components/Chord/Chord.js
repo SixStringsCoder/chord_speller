@@ -3,7 +3,6 @@ import Note from '../Note/Note';
 
 class Chord extends Component {
 
-
   playChord = (e) => {
     let loadChord = require(`../../audio/chords/${this.props.chordAudio}-chord.mp3`);
     let chord = new Audio(loadChord);
@@ -13,7 +12,6 @@ class Chord extends Component {
 
   render() {
     const { name, label, notes, audio, enharmonic } = this.props;
-    console.log({enharmonic});
     return (
       <div className="chordEntryDiv">
         <label htmlFor={label + "root"}
