@@ -4,13 +4,14 @@
 
 <strong>The <em>Chord Speller</em> app tests a user on basic <em>triad</em> and <em>four-note</em> spellings of music chords.</strong> The goal of the app is to enable students of music to have a solid grasp of building basic chords which can help with music improvisation as well as songwriting and composition.
 
-After the user has typed in the correct note, the background of the input turns green and an audio file plays that note, and red when incorrect with no audio file responding.  The user can click the white chord button to hear an audio sample of what the whole chord sounds like.
+After the user has typed in the correct note, the background of the input turns green and an audio file sounds that note, and red when incorrect with no audio file responding.  The user can click the white chord button to hear an audio sample of what the whole chord sounds like.
 ![sample](./screen_shots/sampleUI.png)
 
 The <code>?</code> button opens a modal window which explains how to build the type of chord being tested. The example notes are chosen randomly so students see a mixture of samples not just examples in C.
 ![help](./screen_shots/modal_help.png)
 
 <hr />
+
 ##### Start-up Server
 
 To run the server, NPM or Yarn must be installed.
@@ -33,11 +34,11 @@ This project was built using *Create React App*.  For complete technical details
 - Media queries used to build the *responsive design*.
 - JavaScript (ECMASript 6)
 - React 16.5.2
-
+<hr />
 
 #### Picture of React Component Map
 ![breakdown](./screen_shots/componentMap.jpeg)
-
+<hr />
 
 #### Pictures of Responsive Design
 ###### Phone
@@ -51,7 +52,7 @@ This project was built using *Create React App*.  For complete technical details
 
 ###### Desktop
 ![desktop view](./screen_shots/desktop.png)
-
+<hr />
 
 #### Future Features
 - add a timer for extra challenge

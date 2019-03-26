@@ -9,7 +9,7 @@ const HelpWindow = ({ showModal, handleQuestion, hasQuestion, chords, scale }) =
 
   return (
     <section className={hasQuestion ? "help-window-show" : "help-window-hide"}>
-      <p><span className="help-window-text">{scale}</span> chords consists of:</p>
+      <p><span className="help-window-text">{scale}</span> chords consist of:</p>
 
       <ul className="chord-note-list-helpMenu">
         {(
